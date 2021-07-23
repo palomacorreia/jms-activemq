@@ -22,11 +22,16 @@ public class TesteConsumidor {
 		consumer.setMessageListener(new MessageListener() {
 			@Override
 			public void onMessage(Message message) {
-				System.out.println("Recebendo msg: " + message);
+				TextMessage textMessage = (TextMessage) message;
+				try {
+					System.out.println(((TextMessage) message).getText());
+				} catch (JMSException e) {
+					e.printStackTrace();
+				}
 
 			}
 		});
-		
+
 		new Scanner(System.in).nextLine();
 		
 		session.close();
