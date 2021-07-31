@@ -29,6 +29,8 @@ public class TesteProdutorTopicoEstoque {
 
 		for(int i = 0; i < 1000; i ++) {
 			Message message = session.createTextMessage("<pedido><id>" + i + "</id></pedido>");
+			//para utilizar selector
+			message.setBooleanProperty("ebook", false);
 			producer.send(message);
 		}
 /*		Interface QueueBrowser-https://docs.oracle.com/javaee/7/api/javax/jms/QueueBrowser.html
