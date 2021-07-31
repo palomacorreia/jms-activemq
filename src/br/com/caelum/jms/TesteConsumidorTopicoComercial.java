@@ -9,7 +9,7 @@ public class TesteConsumidorTopicoComercial {
 
     @SuppressWarnings("resource")
     public static void main(String[] args) throws Exception {
-
+    	System.setProperty("org.apache.activemq.SERIALIZABLE_PACKAGES","java.lang,br.com.caelum.modelo");
         InitialContext context = new InitialContext();
         ConnectionFactory factory = (ConnectionFactory) context.lookup("ConnectionFactory");
 
