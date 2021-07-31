@@ -5,7 +5,7 @@ import javax.naming.InitialContext;
 import java.util.Properties;
 import java.util.Scanner;
 
-public class TesteProdutor {
+public class TesteProdutorFila {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws Exception {
